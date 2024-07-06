@@ -1,4 +1,4 @@
-rootProject.name = "kmp-compose-gradle-skeleton"
+rootProject.name = "kmp-zipline-example"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
