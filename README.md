@@ -1,4 +1,4 @@
-# KMP Compose Gradle Skeleton
+# KMP Zipline Example
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
