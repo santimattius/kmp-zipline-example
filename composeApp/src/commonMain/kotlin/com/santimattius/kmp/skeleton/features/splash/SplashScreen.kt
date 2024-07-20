@@ -15,10 +15,9 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.santimattius.kmp.skeleton.features.home.HomeScreen
-import kmp_compose_gradle_skeleton.composeapp.generated.resources.Res
-import kmp_compose_gradle_skeleton.composeapp.generated.resources.compose_multiplatform
+import kmp_zipline_example.composeapp.generated.resources.Res
+import kmp_zipline_example.composeapp.generated.resources.compose_multiplatform
 import kotlinx.coroutines.delay
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
 object SplashScreen : Screen {
