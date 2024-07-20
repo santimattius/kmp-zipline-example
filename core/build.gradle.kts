@@ -9,7 +9,10 @@ kotlin {
     iosArm64()
     iosX64()
     iosSimulatorArm64()
-
+    js {
+        browser()
+        binaries.executable()
+    }
     applyDefaultHierarchyTemplate()
 
     sourceSets {
@@ -35,6 +38,7 @@ kotlin {
         val iosMain by getting {
             dependsOn(hostMain)
         }
+
     }
 }
 
