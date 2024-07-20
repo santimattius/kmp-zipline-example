@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import okhttp3.OkHttpClient
 import java.util.concurrent.Executors
 
-//todo:"http://10.0.2.2:8080/manifest.zipline.json"
 class AndroidServerManager(
     private val manifestUrl: String,
     override val scope: CoroutineScope

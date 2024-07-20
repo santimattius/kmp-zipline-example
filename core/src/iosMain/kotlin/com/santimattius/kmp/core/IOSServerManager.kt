@@ -7,7 +7,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import platform.Foundation.NSURLSession
 
-// TODO: "http://localhost:8080/manifest.zipline.json"
 class IOSServerManager(
     private val manifestUrl: String,
     override val scope: CoroutineScope

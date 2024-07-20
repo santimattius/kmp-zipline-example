@@ -68,6 +68,8 @@ kotlin {
             api(libs.koin.core)
             api(libs.koin.compose)
 
+            implementation(projects.core)
+
         }
 
         iosMain.dependencies {

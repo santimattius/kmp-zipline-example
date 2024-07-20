@@ -1,7 +1,7 @@
 package com.santimattius.kmp.skeleton.features.home
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,7 +12,9 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -51,10 +53,17 @@ fun HomeScreenContent(
             }
         }
     ) {
-        Box(
+        Column(
             modifier = Modifier.fillMaxSize().padding(it),
-            contentAlignment = Alignment.Center
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            val dynamicText by screenModel.uiText.collectAsState()
+            Text(
+                modifier = Modifier.padding(10.dp),
+                text = dynamicText,
+                color = Color.Red,
+                style = MaterialTheme.typography.titleLarge
+            )
             when {
                 state.isLoading -> LoadingIndicator()
 
