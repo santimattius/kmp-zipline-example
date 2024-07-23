@@ -23,6 +23,11 @@ koinCompose = "1.1.5"
 kotlinxCoroutinesAndroid = "1.8.1"
 ktorVersion = "2.3.12"
 
+ziplineVersion = "1.12.0"
+
+okHttp = "4.12.0"
+okio = "3.9.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
@@ -49,6 +54,18 @@ ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVer
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorVersion" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVersion" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorVersion" }
+
+#Zipline
+zipline-core = { module = "app.cash.zipline:zipline", version.ref = "ziplineVersion" }
+zipline-gradle-plugin = { module = "app.cash.zipline:zipline-gradle-plugin", version.ref = "ziplineVersion" }
+zipline-kotlin-plugin = { module = "app.cash.zipline:zipline-kotlin-plugin", version.ref = "ziplineVersion" }
+zipline-loader = { module = "app.cash.zipline:zipline-loader", version.ref = "ziplineVersion" }
+zipline-profiler = { module = "app.cash.zipline:zipline-profiler", version.ref = "ziplineVersion" }
+
+#Okio
+okio-core = { module = "com.squareup.okio:okio", version.ref = "okio" }
+#OkHttp
+okHttp-core = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
