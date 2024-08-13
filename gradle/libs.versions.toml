@@ -58,9 +58,7 @@ ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx
 #Zipline
 zipline-core = { module = "app.cash.zipline:zipline", version.ref = "ziplineVersion" }
 zipline-gradle-plugin = { module = "app.cash.zipline:zipline-gradle-plugin", version.ref = "ziplineVersion" }
-zipline-kotlin-plugin = { module = "app.cash.zipline:zipline-kotlin-plugin", version.ref = "ziplineVersion" }
 zipline-loader = { module = "app.cash.zipline:zipline-loader", version.ref = "ziplineVersion" }
-zipline-profiler = { module = "app.cash.zipline:zipline-profiler", version.ref = "ziplineVersion" }
 
 #Okio
 okio-core = { module = "com.squareup.okio:okio", version.ref = "okio" }

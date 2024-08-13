@@ -13,6 +13,7 @@ kotlin {
         browser()
         binaries.executable()
     }
+
     applyDefaultHierarchyTemplate()
 
     sourceSets {
