@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.flowOf
 
 class BasicSayHello : SayHelloService {
     override fun sayHello(): Flow<String> {
-        return flowOf("Hello Zipline")
+        return flowOf("Hello Medium")
     }
 }
