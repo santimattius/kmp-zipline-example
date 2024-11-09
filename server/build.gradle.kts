@@ -8,17 +8,18 @@ plugins {
 }
 
 kotlin {
+    applyDefaultHierarchyTemplate()
 
     js {
         browser()
         binaries.executable()
     }
 
-    applyDefaultHierarchyTemplate()
 
     sourceSets {
         commonMain.dependencies {
             api(libs.zipline.core)
+            api(libs.kotlinx.coroutines.core)
             implementation(projects.core)
         }
 
