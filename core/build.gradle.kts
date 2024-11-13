@@ -40,6 +40,13 @@ kotlin {
             dependsOn(hostMain)
         }
 
+        androidUnitTest.dependencies {
+            implementation(kotlin("test"))
+        }
+        iosTest.dependencies {
+            implementation(kotlin("test"))
+        }
+
     }
 }
 
