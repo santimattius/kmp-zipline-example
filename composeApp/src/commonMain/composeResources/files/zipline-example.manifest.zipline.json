@@ -1,0 +1,88 @@
+{
+  "unsigned": {
+    "signatures": {},
+    "freshAtEpochMs": null,
+    "baseUrl": null
+  },
+  "modules": {
+    "./kotlin-kotlin-stdlib.js": {
+      "url": "kotlin-kotlin-stdlib.zipline",
+      "sha256": "9f02fd7a7816509447fc636d64ed5c40fba48100a490057a1cee5d9588c6a4a3",
+      "dependsOnIds": []
+    },
+    "./kotlin-kotlinx-atomicfu-runtime.js": {
+      "url": "kotlin-kotlinx-atomicfu-runtime.zipline",
+      "sha256": "b46f22347cb1bdc5688f6825f88c5293f757ff6239f809c4dc6b9ce0ac6f189f",
+      "dependsOnIds": []
+    },
+    "./kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js": {
+      "url": "kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.zipline",
+      "sha256": "4834dbdc414e1f82ac766c7e47c207bf30f15388e1d6bbc20585e61ad942b4cd",
+      "dependsOnIds": []
+    },
+    "./kotlinx-atomicfu.js": {
+      "url": "kotlinx-atomicfu.zipline",
+      "sha256": "61ef1a1c0ea9b0c421f73752d8b9e4f65526254213d52bdd24729f6f7566e1bf",
+      "dependsOnIds": [
+        "./kotlin-kotlin-stdlib.js"
+      ]
+    },
+    "./kotlinx-serialization-kotlinx-serialization-core.js": {
+      "url": "kotlinx-serialization-kotlinx-serialization-core.zipline",
+      "sha256": "8a9cdbaab18f1f25c82e32929e89c95733d16d50395b2a07d9895bb02e189fbe",
+      "dependsOnIds": [
+        "./kotlin-kotlin-stdlib.js"
+      ]
+    },
+    "./kotlinx-coroutines-core.js": {
+      "url": "kotlinx-coroutines-core.zipline",
+      "sha256": "d70c36aeaeba8dbd2a5271cfe9fb522b7a23c3952a8c694a16f82c98e8c65be4",
+      "dependsOnIds": [
+        "./kotlin-kotlin-stdlib.js",
+        "./kotlinx-atomicfu.js"
+      ]
+    },
+    "./kotlinx-serialization-kotlinx-serialization-json.js": {
+      "url": "kotlinx-serialization-kotlinx-serialization-json.zipline",
+      "sha256": "de98fa6de461dd19a53c68aa61d481bb4c0708cd1ac34c76070422beccf22ebd",
+      "dependsOnIds": [
+        "./kotlinx-serialization-kotlinx-serialization-core.js",
+        "./kotlin-kotlin-stdlib.js"
+      ]
+    },
+    "./zipline-root-zipline.js": {
+      "url": "zipline-root-zipline.zipline",
+      "sha256": "eee98f2c9801b7ea0e6aef5cb64da43f49fea895edcfb683b1814d7d4c810772",
+      "dependsOnIds": [
+        "./kotlin-kotlin-stdlib.js",
+        "./kotlinx-serialization-kotlinx-serialization-core.js",
+        "./kotlinx-coroutines-core.js",
+        "./kotlinx-serialization-kotlinx-serialization-json.js"
+      ]
+    },
+    "./kmp-zipline-example-core.js": {
+      "url": "kmp-zipline-example-core.zipline",
+      "sha256": "617a3d0e09a115f3823788eca6a51f27255c77b9791ffb0358f72d2804d5a2ef",
+      "dependsOnIds": [
+        "./zipline-root-zipline.js",
+        "./kotlin-kotlin-stdlib.js",
+        "./kotlinx-coroutines-core.js",
+        "./kotlinx-serialization-kotlinx-serialization-core.js"
+      ]
+    },
+    "./kmp-zipline-example-server.js": {
+      "url": "kmp-zipline-example-server.zipline",
+      "sha256": "00dc0b2b253ff6e02208274e4e338664f49b783559546496258b9fd34d60ce19",
+      "dependsOnIds": [
+        "./kotlinx-coroutines-core.js",
+        "./kotlin-kotlin-stdlib.js",
+        "./zipline-root-zipline.js",
+        "./kmp-zipline-example-core.js"
+      ]
+    }
+  },
+  "mainModuleId": "./kmp-zipline-example-server.js",
+  "mainFunction": "com.santimattius.server.main",
+  "version": null,
+  "metadata": {}
+}

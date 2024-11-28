@@ -11,7 +11,8 @@ actual val platformModule: Module
         factory<ServerManager> {
             IOSServerManager(
                 manifestUrl = "http://localhost:8080/manifest.zipline.json",
-                scope = MainScope()
+                scope = MainScope(),
+                path = ""
             )
         }
     }

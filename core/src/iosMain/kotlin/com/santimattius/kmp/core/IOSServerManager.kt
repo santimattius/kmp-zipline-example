@@ -1,15 +1,18 @@
 package com.santimattius.kmp.core
 
 import app.cash.zipline.loader.ManifestVerifier.Companion.NO_SIGNATURE_CHECKS
+import app.cash.zipline.loader.ZiplineFile
 import app.cash.zipline.loader.ZiplineLoader
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
+import okio.FileSystem
 import platform.Foundation.NSURLSession
 
 class IOSServerManager(
     private val manifestUrl: String,
-    override val scope: CoroutineScope
+    override val scope: CoroutineScope,
+    override val path: String
 ) : ServerManager {
 
     private val ziplineDispatcher = Dispatchers.Main
