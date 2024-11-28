@@ -2,7 +2,7 @@ package com.santimattius.kmp.core
 
 import android.content.Context
 import app.cash.zipline.loader.ManifestVerifier.Companion.NO_SIGNATURE_CHECKS
-import app.cash.zipline.loader.ZiplineFile
+import app.cash.zipline.loader.ZiplineCache
 import app.cash.zipline.loader.ZiplineLoader
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
@@ -13,6 +13,7 @@ import okio.Path.Companion.toPath
 import java.util.concurrent.Executors
 
 class AndroidServerManager(
+    private val context: Context,
     private val manifestUrl: String,
     override val scope: CoroutineScope,
     override val path: String
@@ -32,6 +33,13 @@ class AndroidServerManager(
                 dispatcher = ziplineDispatcher,
                 manifestVerifier = NO_SIGNATURE_CHECKS,
                 httpClient = okHttpClient,
+            ).withCache(
+                cache = ZiplineCache(
+                    context = context,
+                    fileSystem = FileSystem.SYSTEM,
+                    directory = context.dataDir.path.toPath(),
+                    maxSizeInBytes = (10 * 1024)
+                ),
             ).withEmbedded(
                 embeddedFileSystem = FileSystem.SYSTEM,
                 embeddedDir = path.toPath()
