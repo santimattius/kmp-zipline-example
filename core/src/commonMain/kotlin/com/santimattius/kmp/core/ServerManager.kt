@@ -9,6 +9,8 @@ interface ServerManager {
 
     val scope: CoroutineScope
 
+    val path: String
+
     fun start()
 
     fun stop()

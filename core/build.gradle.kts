@@ -27,6 +27,7 @@ kotlin {
             dependencies {
                 implementation(libs.zipline.loader)
                 api(libs.okio.core)
+                api(libs.okio.assetfilesystem)
             }
         }
 

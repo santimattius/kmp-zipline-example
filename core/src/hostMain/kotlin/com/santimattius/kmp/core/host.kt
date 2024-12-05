@@ -1,6 +1,7 @@
 package com.santimattius.kmp.core
 
-import app.cash.zipline.loader.DefaultFreshnessCheckerNotFresh
+import app.cash.zipline.ZiplineManifest
+import app.cash.zipline.loader.FreshnessChecker
 import app.cash.zipline.loader.LoadResult
 import app.cash.zipline.loader.ZiplineLoader
 import kotlinx.coroutines.CoroutineDispatcher
@@ -28,7 +29,12 @@ fun startZipline(
         // load the manifest
         val loadResultFlow: Flow<LoadResult> = loader.load(
             applicationName = ApplicationName,
-            freshnessChecker = DefaultFreshnessCheckerNotFresh,
+            freshnessChecker = object : FreshnessChecker {
+                override fun isFresh(manifest: ZiplineManifest, freshAtEpochMs: Long): Boolean {
+                    //TODO: tests local manifest load
+                    return true
+                }
+            },
             manifestUrlFlow = repeatFlow(manifestUrl, 500L),
         )
         var previousJob: Job? = null
