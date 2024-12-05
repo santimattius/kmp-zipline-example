@@ -20,7 +20,7 @@
             android:exported="false"
             tools:node="merge">
             <meta-data
-                android:name="com.santimattius.kmp.ContextInitializer"
+                android:name="com.santimattius.kmp.skeleton.ContextInitializer"
                 android:value="androidx.startup" />
         </provider>
         <activity
